@@ -9,7 +9,7 @@
 
 
 
-// rest
+// rest (trả về dạng mảng)
 
 // function hihi([a,b,...rest]){
 //     console.log(a);
@@ -23,13 +23,19 @@
 // Tagged template literals
 
 // function hightlight([first,...strings],...valuses){
-//         console.log('first:', first);
-//         console.log('strings:', strings);
-//         console.log('values:', valuses);
+//     return valuses.reduce(
+//         (acc,curr)=> [...acc,`<span> ${curr} </span>`,strings.shift()],
+//         [first]
+//         )
+//         .join('');
 // }
 // var brand ='cuoi cung';
 // var course ='ca mau';
 // const html= hightlight`nghe noi ${course} xa lam o ${brand} ban do ca mau!`;
+// console.log(html);
+
+ 
+
 
 
 // dùng reduce tìm min max
@@ -103,6 +109,51 @@
 
 
 
+//destructuring
+
+//vd đơn giản
+// var array=['hihi','haha','huhu'];
+// var [a,...rest]=array;
+// console.log(a);
+// console.log(rest);
+
+
+// // vd 2
+// var course={
+//     name : 'javascript',
+//     price: '1000',
+//     image: 'image-address',
+//     children:{
+//         name:'ReactJS'
+//     },
+//     // description:'description value'
+
+// };
+//  // nếu trùng name thì phải đặt tên khác  
+//  // nếu description có thì in ra mà k có thì lấy 'hihi'
+// var { name: parentName,description='hihi',price, children:{name:childrenName }}=course;
+// console.log(parentName,price);
+// console.log(description);
+// console.log(childrenName);
+
+
+// classes trong es6
+
+// class course{
+//     constructor (name,price){
+//         this.name=name;
+//         this.price=price;
+//         this.getName = function(){
+//             return this.name;
+//         }
+//     }
+// }
+// const phpCourse= new course('php', 1000);
+// const jsCourse= new course('javascript', 1200);
+
+// console.log(phpCourse);
+// console.log(jsCourse);
+
 
 //    node javascript/variable.js
-console.log("thành công");
+// console.log("thành công");
