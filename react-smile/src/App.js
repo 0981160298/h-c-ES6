@@ -1,22 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Learn from './components/hello';
+import Learning from './components/learning';
+import ColorBox from './components/ColoBox';
+import CountDown from './components/Countdown';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn More
-        </a>
+       
+        {/* <Learn name='Mango' weight='12' />
+        <Learn name='Orange' weight='13' />
+        <Learn name='apple' weight='11' /> */}
+
+         {/* <Learning/> */}
+
+
+        <CountDown seconds={30} />
+
+         {/* tạo 2 màu */}
+        <ColorBox color="deeppink"/>
+        <ColorBox color="green"/>
+
+        
+
+        
       </header>
     </div>
   );
